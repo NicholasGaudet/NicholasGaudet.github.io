@@ -2073,7 +2073,7 @@ input[type="radio"] + label:before {
 }
 
 :-moz-placeholder {
-  color: #ADD8e6 !important;
+  color: #555 !important;
   font-style: italic;
   opacity: 1;
 }
@@ -2085,7 +2085,7 @@ input[type="radio"] + label:before {
 }
 
 :-ms-input-placeholder {
-  color: #ADD8e6 !important;
+  color: #555 !important;
   font-style: italic;
   opacity: 1;
 }
