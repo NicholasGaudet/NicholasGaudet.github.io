@@ -2843,7 +2843,7 @@ input[type="button"]:disabled,
 }
 
 #header a {
-  color: #ADD8e6;
+  color: #555;
 }
 
 #header a:hover {
