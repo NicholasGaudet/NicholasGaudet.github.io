@@ -2870,7 +2870,7 @@ input[type="button"]:disabled,
 }
 
 #header > header p {
-  color: #ADD8e6;
+  color: #555;
   font-style: italic;
   margin: 1em 0 0 0;
 }
