@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
+
+\PassOptionsToPackage{style=ieee,sorting=ydnt,uniquename=init,defernumbers=true}{biblatex}
+
+% Most commands and style definitions are in settings.sty.
+\usepackage{settings}
+
+
+\DefineBibliographyStrings{english}{url={\textsc{url}}}
+
+%% Only needed if you want a Publication List
+\addbibresource{own-bib.bib}
+
+
+\mynames{Lim/Lian\bibnamedelima Tze,
+  Wong/Lian\bibnamedelima Tze,
+  Lim/Tracy,
+  Lim/L.\bibnamedelimi T.}
+%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+
+% Change the fonts if you want
+\ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
+  \usepackage{fontspec} 
+
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage[medium,bold]{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\else % If you're using pdfLaTeX or latex
+  \usepackage[T1]{fontenc}
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\fi
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\leftheader{%
+  {\LARGE\bfseries\sffamily Nicholas Gaudet, Maitrise, Université Laval }
+
+  \makefield{\faEnvelope[regular]}{\href{mailto:example@gmail.com}{\texttt{NIGAU108@ulaval.ca}}}
+  %% Next line
+  \makefield{\faGlobe}{\url{http://NicholasGaudet.github.io/}}
+  % You can use a tabular here if you want to line up the fields.
+}
+
+\title{Curriculum Vitae}
+
+\begin{document}
+
+
+\makerubric{employment}
+\makerubric{education}
+
+
+\input{publications}
+
+\makerubric{skills}
+
+
+\makerubric{referee}
+% \input{referee-full}
+
+\end{document}
