@@ -95,7 +95,7 @@ correlation_by_party \<- GARPH %\>% group_by(Party) %\>% summarise(correlation =
 
 print(correlation_by_party)
 
-![Example Plot]("C:/Users/nicho/Dropbox/GitHub/NicholasGaudet.github.io/NicholasGaudet.github.io/cv/Graphique_2021.png")
+![Example Plot]("cv/projet_session/Graphique_2021.png")
 
 Nous avons décider d'utiliser R pour de nombreuses raisons. D'un point de vue éthique, R est un logiciel libre et open-source, ce qui signifie qu'il est accessible gratuitement à tous. De plus, l'écosystème R encourage la transparence scientifique car les scripts et les analyses peuvent êtres reproduits et vérifiés par d'autres chercheurs. De plus, l'integration de *packages* de visualisation tels que ggplot, ggplot2, clessnverse etc.. font en sorte que nos données peuvent ètres démontrées de manière engageante et claire. en grso, sa flexibilitégraphique aisi que sont accessibilité générale nous à poussé à utiliser R.
 
