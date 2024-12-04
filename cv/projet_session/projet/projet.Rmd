@@ -2,38 +2,39 @@
 title: ""
 author: ""
 output:
-  pdf_document:
-    latex_engine: xelatex
+  html_document:
     toc: false
+    df_print: paged
     number_sections: false
 fontsize: 12pt
 geometry: margin=2.5cm
 linestretch: 1.5
-mainfont: "Times New Roman"
+mainfont: Times New Roman
 ---
-\newpage
+  
+<div style="text-align: center;">
 
-\begin{center}
+  <h1 style="font-size: 36px; font-weight: bold;">Projet de Session</h1>
+  
+  <p style="font-size: 24px;"><strong>Nicholas Gaudet</strong></p>
+  <p style="font-size: 20px;">537 284 355</p>
 
-\Huge \textbf{Projet de Session} \\[1.5cm]
-\large \textbf{Nicholas Gaudet} \\  
-537 284 355 \\[1cm]
+  <p style="font-size: 20px;">Outils Numériques de Recherche</p>
+  <p style="font-size: 20px;">POL-6078</p>
 
-\large Outils Numériques de Recherche \\  
-POL-6078 \\[1.5cm]
+  <p style="font-size: 24px;">Présenté à:</p>
+  <p style="font-size: 20px; font-weight: bold;">Adrien Cloutier</p>
 
-\large Présenté à: \\  
-\textbf{Adrien Cloutier} \\[1.5cm]
+  <p style="font-size: 20px;">Département de science politique</p>
+  <p style="font-size: 20px;">Faculté des sciences sociales</p>
+  <p style="font-size: 20px;">Université Laval</p>
 
-\large Département de science politique \\  
-Faculté des sciences sociales \\  
-Université Laval \\[1.5cm]
+  <p style="font-size: 20px;">Québec, Canada</p>
 
-\large Québec, Canada \\[1.5cm]
+  <p style="font-size: 18px;">© Alexandre Bouillon, `r Sys.Date()`</p>
+  
+</div>
 
-\copyright{} Alexandre Bouillon, \today{}
-
-\end{center}
 
 
 
