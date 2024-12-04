@@ -99,7 +99,28 @@ correlation_by_party \<- GARPH %\>% group_by(Party) %\>% summarise(correlation =
 
 print(correlation_by_party)
 
-![Example Plot](%22C:/Users/nicho/OneDrive/Desktop/Memoire/Graphique%202021.png%22)
+![Example Plot]("C:/Users/nicho/Dropbox/GitHub/NicholasGaudet.github.io/NicholasGaudet.github.io/cv/Graphique_2021.png")
 
 Nous avons décider d'utiliser R pour de nombreuses raisons. D'un point de vue éthique, R est un logiciel libre et open-source, ce qui signifie qu'il est accessible gratuitement à tous. De plus, l'écosystème R encourage la transparence scientifique car les scripts et les analyses peuvent êtres reproduits et vérifiés par d'autres chercheurs. De plus, l'integration de *packages* de visualisation tels que ggplot, ggplot2, clessnverse etc.. font en sorte que nos données peuvent ètres démontrées de manière engageante et claire. en grso, sa flexibilitégraphique aisi que sont accessibilité générale nous à poussé à utiliser R.
+
+
+# Discussion
+
+Nos choix d'outils se sont principalement axées sur l'accessibilité. La reproduction en science sociles est un outil fort pour les chercheurs afin de confirmer ou rejeter des conclusions et des résultats. Sans une accesibilitée accrue, la recherche pourrait devenir un endroit ou seulement les gens avec les logiciles les plus noiuveau et les plus avancées pourraient pratique. En gros on pourrait commencer à appercevoir une clique élite de la recherche. De plus, la majorité de nos outils sont déja utilisées en grande partie par la communauté scientifique, ce qui peut promouvoir l'entraide et la collaboration. Cette collaboration pourrait mener un jours ades découvertes importantes, à travers le logiciel libre et l'accès pour tous. De plus, l'accès à ces outils se fait de manière transparente, ce qui promouvis l'éthique de la recherche. afin  En gros, les choix d'outils proposées dans notre recherche cherchent a créer un lien a travers la communauté scientifique afin qu'elle peut représenter le plus de points de vus possibles. C'est sa la vraie démocratisation de la recherche. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :::
