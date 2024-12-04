@@ -73,7 +73,9 @@ Les données électorales furent obtenues par l’entremise de la Bibliothèque 
 
 # Analyse et visualisation des données
 
-A l'aide de l'outil R, nous avons réussis a visualiser nos données afin de faire des régressions nous permettant d'analyser les relations entre notre variable francophone et notre variable électorale. Le code suivant nous apermis de faire une analyse de nos données. Voici le code utilisée:
+A l'aide de l'outil R, nous avons réussis a visualiser nos données afin de faire des régressions nous permettant d'analyser les relations entre notre variable francophone et notre variable électorale. Le code suivant nous a permis de faire une analyse de nos données. Voici le code utilisée:
+
+# Code
 
 install.packages("readxl") install.packages("ggplot2") library(readxl) library(ggplot2) install.packages("dplyr") library(dplyr) install.packages("broom") library(broom) GARPH \<- read_excel("C:/Users/nicho/OneDrive/Documents/Test.xlsx")
 
@@ -85,17 +87,11 @@ title = "Nuage de points avec régression linéaire par parti" x = "Pourcentage 
 
 correlation \<- cor(GARPH$Percent_French, GARPH$Vote_Percentage) print(paste("Correlation:", correlation))
 
-# Fit the linear model
-
 model \<- lm(Vote_Percentage \~ Percent_French + Party, data = GARPH)
-
-# Display the model summary
 
 summary(model)
 
 correlation_by_party \<- GARPH %\>% group_by(Party) %\>% summarise(correlation = cor(Percent_French, Vote_Percentage))
-
-# Print the results
 
 print(correlation_by_party)
 
