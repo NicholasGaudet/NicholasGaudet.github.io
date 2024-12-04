@@ -1,64 +1,44 @@
-\documentclass[12pt]{article}
+---
+title: ""
+author: ""
+output:
+  pdf_document:
+    latex_engine: xelatex
+    toc: false
+    number_sections: false
+fontsize: 12pt
+geometry: margin=2.5cm
+linestretch: 1.5
+mainfont: "Times New Roman"
+---
+\newpage
 
-\usepackage{graphicx} % Required for inserting images
-\usepackage[utf8]{inputenc}
-\usepackage{times}
-\usepackage{fvextra}
-\usepackage[style=apa,url=false,isbn=false,doi=false,backend=biber,language=french,autolang=other]{biblatex}
-\usepackage{csquotes}
-\usepackage{booktabs}
-\usepackage{multirow}
-\usepackage[letterpaper, margin=2.5cm]{geometry}
-\usepackage[main=french,english]{babel}
-\usepackage[toc,page]{appendix}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{xcolor}
-\usepackage{subcaption}
-\usepackage{listings}
-\usepackage{microtype}
+\begin{center}
 
-\linespread{1.5}
+\Huge \textbf{Projet de Session} \\[1.5cm]
+\large \textbf{Nicholas Gaudet} \\  
+537 284 355 \\[1cm]
 
-\addbibresource{rc3.bib}
-\AtEveryBibitem{\clearfield{annotation}\clearfield{eprint}\clearfield{eprinttype}\clearfield{eprintclass}\clearfield{note}}
-\DefineBibliographyExtras{french}{\restorecommand\mkbibnamefamily}
-\begin{document}
+\large Outils Numériques de Recherche \\  
+POL-6078 \\[1.5cm]
 
-\setlength{\emergencystretch}{3em}
+\large Présenté à: \\  
+\textbf{Adrien Cloutier} \\[1.5cm]
 
-\begin{titlepage}
-  \newpage{}
-  \let\footnotesize\small{}
-  \let\footnoterule\relax{}
-  \let\footnote\thanks{}
+\large Département de science politique \\  
+Faculté des sciences sociales \\  
+Université Laval \\[1.5cm]
 
-  \baselineskip=1.4\baselineskip{}
+\large Québec, Canada \\[1.5cm]
 
-  \begin{center}
-    \setcounter{page}{1}
-    \includegraphics[height=20mm,keepaspectratio=true]{ul_p.pdf}
-    \vfil{}
-    {\fontsize{17.28}{14}\selectfont \textbf{Projet de Session}}
-    \vfil{}
-    \textbf{Nicholas Gaudet} \\
-    537 284 355
-    \vfil{}
-    Outils Numériques de Recherche \\ POL-6078
-    \vfil{}
-    Présenté à:\\
-    \textbf{ Adrien Cloutier } \\
-    \vfil{}
-    Département de science politique \\Faculté des sciences sociales \\Université Laval
-    \vfil{}
-    \vfil{}
-    Québec, Canada \\
-    \vfil{}
-    \copyright{} Alexandre Bouillon, \today{}
-  \end{center}
-\end{titlepage}
+\copyright{} Alexandre Bouillon, \today{}
+
+\end{center}
+
+
 
 ::: {style="text-align: justify;"}
+<div style="font-family: 'Times New Roman'; font-size: 12pt;">
 # Intoduction
 
 Est ce que les néo brunswikois francophones votent comme un bloc linguistique? C'est une question qui persiste depuis des décennies et qui a été récemment ravivée par les commentaires du premier ministre Blaine Higgs en 2020 (Radio Canada, 2020). En considérant comment l’expérience partagée de l’identité culturelle acadienne peut affecter les attitudes politiques de cet électorat, la réalité acadienne pousserait, en théorie, la population à voter pour des partis de gauche, comme le parti Libéral, afin de s’assurer que les indemnités gouvernementales continuent d’exister. Cela étant dit, les études sur la réalité électorale des populations francophones aux maritimes sont limitées. Il existe alors une grande faille dans la connaissance et la disponibilité du savoir électoral de ces populations, comparativement à la population canadienne en général.
@@ -69,11 +49,11 @@ Dans un contexte plus large, cette recherche est grandement pertinente à la th�
 
 # Collecte de données
 
-Les données électorales furent obtenues par l’entremise de la Bibliothèque du Parlement, qui garde sur son site web les résultats de chaque élection canadienne. Nous avons obtenus nos données de recensements par l'entremise de Statistique Canada, plus précisement du census de population. Idéalement, nous aurions procédé à un *web scrapping* des pages nécéssaires, mais des bloqeurs sont possiblement installées sur le site du census, ce qui fit en sorte qu'il était plus facile de le faire à la main. Ces deux bases de données utilisées sont accessible de manière gratuite et est disponible au grand publique. Notre choix encourage donc la reproductibilité de notre recherche.Nous avons mis nos données récoltées dans un document excel comprenant l'année et le pourcentage de vote de chaque parti ainsi que le pourcentage de francophones durant l'élection donné.
+Les données électorales furent obtenues par l’entremise de la Bibliothèque du Parlement, qui garde sur son site web les résultats de chaque élection canadienne. Nous avons obtenus nos données de recensements par l'entremise de Statistique Canada, plus précisement du census de population. Idéalement, nous aurions procédé à un *web scrapping* des pages nécéssaires, mais des bloqeurs sont possiblement installées sur le site du census, ce qui fit en sorte qu'il était plus facile de le faire à la main. Ces deux bases de données utilisées sont accessible de manière gratuite et sont disponibles au grand publique. Notre choix encourage la reproductibilité de notre recherche.Nous avons mis nos données récoltées dans un document excel comprenant l'année et le pourcentage de vote de chaque parti ainsi que le pourcentage de francophones durant une élection.
 
 # Analyse et visualisation des données
 
-A l'aide de l'outil R, nous avons réussis a visualiser nos données afin de faire des régressions nous permettant d'analyser les relations entre notre variable francophone et notre variable électorale. Le code suivant nous a permis de faire une analyse de nos données. Voici le code utilisée:
+À l'aide de l'outil R, nous avons réussi à visualiser nos données afin de faire des régressions, ce qui nous a permis d'analyser les relations entre notre variable francophone et notre variable électorale. Le code suivant nous a permis de faire une analyse de nos données. Voici le code utilisé :
 
 # Code
 
@@ -95,14 +75,43 @@ correlation_by_party \<- GARPH %\>% group_by(Party) %\>% summarise(correlation =
 
 print(correlation_by_party)
 
-![Example Plot]("cv/projet_session/Graphique_2021.png")
+![Vote francophone par parti, élections fédérales 2021]("C:/Users/nicho/Dropbox/GitHub\NicholasGaudet.github.io/NicholasGaudet.github.io/cv/projet_session/Graphique_2021.png")
 
-Nous avons décider d'utiliser R pour de nombreuses raisons. D'un point de vue éthique, R est un logiciel libre et open-source, ce qui signifie qu'il est accessible gratuitement à tous. De plus, l'écosystème R encourage la transparence scientifique car les scripts et les analyses peuvent êtres reproduits et vérifiés par d'autres chercheurs. De plus, l'integration de *packages* de visualisation tels que ggplot, ggplot2, clessnverse etc.. font en sorte que nos données peuvent ètres démontrées de manière engageante et claire. en grso, sa flexibilitégraphique aisi que sont accessibilité générale nous à poussé à utiliser R.
+
+
+Nous avons décidé d'utiliser R pour de nombreuses raisons. D'un point de vue éthique, R est un logiciel libre et *open-source*, ce qui signifie qu'il est accessible gratuitement à tous. De plus, l'écosystème R encourage la transparence scientifique, car les scripts et les analyses peuvent être reproduits et vérifiés par d'autres chercheurs. De plus, l'intégration de packages de visualisation tels que ggplot, ggplot2, dplyr, etc., fait en sorte que nos données peuvent être démontrées de manière engageante et claire. En gros, sa flexibilité graphique ainsi que son accessibilité générale nous ont poussés à utiliser R.
 
 
 # Discussion
 
-Nos choix d'outils se sont principalement axées sur l'accessibilité. La reproduction en science sociles est un outil fort pour les chercheurs afin de confirmer ou rejeter des conclusions et des résultats. Sans une accesibilitée accrue, la recherche pourrait devenir un endroit ou seulement les gens avec les logiciles les plus noiuveau et les plus avancées pourraient pratique. En gros on pourrait commencer à appercevoir une clique élite de la recherche. De plus, la majorité de nos outils sont déja utilisées en grande partie par la communauté scientifique, ce qui peut promouvoir l'entraide et la collaboration. Cette collaboration pourrait mener un jours ades découvertes importantes, à travers le logiciel libre et l'accès pour tous. De plus, l'accès à ces outils se fait de manière transparente, ce qui promouvis l'éthique de la recherche. afin  En gros, les choix d'outils proposées dans notre recherche cherchent a créer un lien a travers la communauté scientifique afin qu'elle peut représenter le plus de points de vus possibles. C'est sa la vraie démocratisation de la recherche. 
+Nos choix d'outils se sont principalement axés sur l'accessibilité. La reproduction en sciences sociales est un outil puissant pour les chercheurs afin de confirmer ou rejeter des conclusions et des résultats. Sans une accessibilité accrue, la recherche pourrait devenir un domaine où seulement les personnes disposant des logiciels les plus récents et les plus avancés pourraient pratiquer. En gros, on pourrait commencer à apercevoir une clique élite dans la recherche. De plus, la majorité de nos outils sont déjà utilisés en grande partie par la communauté scientifique, ce qui peut promouvoir l'entraide et la collaboration. Cette collaboration pourrait mener un jour à des découvertes importantes, à travers le logiciel libre et l'accès pour tous. De plus, l'accès à ces outils se fait de manière transparente, ce qui promeut l'éthique de la recherche. En gros, les choix d'outils proposés dans notre recherche cherchent à créer un lien à travers la communauté scientifique afin qu'elle puisse représenter le plus de points de vue possibles. C'est ça la vraie démocratisation de la recherche
+
+
+
+\newpage
+# Bibliographie
+
+Anderson, C. D., & Stephenson, L. B. (Eds.). (2011). Voting behaviour in Canada. UBC Press.
+
+Arsenault, B., Alain, P. (2004). Histoire des Acadiens. Canada: Fides.
+
+Arsenault, G. & Ouellette, R. (2024). « Une analyse du vote linguistique au
+  Nouveau-Brunswick (1908-2020) » Francophonies d’Amérique, printemps. 
+
+Cross, William et Ian Stewart. (2002). « Ethnicity and accommodation in the New Brunswick
+  party system », Journal of Canadian studies, vol. 36, n°4, p.32-58.
+
+Finn, J.G. (1973). Tentative d’explication du vote ethnique acadien , La Revue de
+  l’Université de Moncton, vol. 6, n°2. 
+
+Johnston, R. (2017). The Canadian Party System: An Analytic History. Canada : UBC Press. 
+
+Radio-Canada. (2020) Issue de:         https://www.cbc.ca/news/canada/new-brunswick/pc-party-higgs-francophone-voters-new-brunswick-eleciton-1.5725581
+
+Thorburn, Hugh G. (1961). Politics in New Brunswick, Toronto, University of Toronto Press.
+
+Wolfinger, R. E. (1965). The Development and Persistence of Ethnic Voting. The American
+  Political Science Review, 59(4)
 
 
 
@@ -112,11 +121,5 @@ Nos choix d'outils se sont principalement axées sur l'accessibilité. La reprod
 
 
 
-
-
-
-
-
-
-
+</div>
 :::
