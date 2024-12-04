@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage{fvextra}
+\usepackage[style=apa,url=false,isbn=false,doi=false,backend=biber,language=french,autolang=other]{biblatex}
+\usepackage{csquotes}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[letterpaper, margin=2.5cm]{geometry}
+\usepackage[main=french,english]{babel}
+\usepackage[toc,page]{appendix}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{microtype}
+
+\linespread{1.5}
+
+\addbibresource{rc3.bib}
+\AtEveryBibitem{\clearfield{annotation}\clearfield{eprint}\clearfield{eprinttype}\clearfield{eprintclass}\clearfield{note}}
+\DefineBibliographyExtras{french}{\restorecommand\mkbibnamefamily}
+\begin{document}
+
+\setlength{\emergencystretch}{3em}
+
+\begin{titlepage}
+  \newpage{}
+  \let\footnotesize\small{}
+  \let\footnoterule\relax{}
+  \let\footnote\thanks{}
+
+  \baselineskip=1.4\baselineskip{}
+
+  \begin{center}
+    \setcounter{page}{1}
+    \includegraphics[height=20mm,keepaspectratio=true]{ul_p.pdf}
+    \vfil{}
+    {\fontsize{17.28}{14}\selectfont \textbf{Projet de Session}}
+    \vfil{}
+    \textbf{Nicholas Gaudet} \\
+    537 284 355
+    \vfil{}
+    Outils Numériques de Recherche \\ POL-6078
+    \vfil{}
+    Présenté à:\\
+    \textbf{ Adrien Cloutier } \\
+    \vfil{}
+    Département de science politique \\Faculté des sciences sociales \\Université Laval
+    \vfil{}
+    \vfil{}
+    Québec, Canada \\
+    \vfil{}
+    \copyright{} Alexandre Bouillon, \today{}
+  \end{center}
+\end{titlepage}
+
+::: {style="text-align: justify;"}
+# Intoduction
+
+Est ce que les néo brunswikois francophones votent comme un bloc linguistique? C'est une question qui persiste depuis des décennies et qui a été récemment ravivée par les commentaires du premier ministre Blaine Higgs en 2020 (Radio Canada, 2020). En considérant comment l’expérience partagée de l’identité culturelle acadienne peut affecter les attitudes politiques de cet électorat, la réalité acadienne pousserait, en théorie, la population à voter pour des partis de gauche, comme le parti Libéral, afin de s’assurer que les indemnités gouvernementales continuent d’exister. Cela étant dit, les études sur la réalité électorale des populations francophones aux maritimes sont limitées. Il existe alors une grande faille dans la connaissance et la disponibilité du savoir électoral de ces populations, comparativement à la population canadienne en général.
+
+# Revue Littéraire
+
+Dans un contexte plus large, cette recherche est grandement pertinente à la théorisation et à la mise en place d’un cadre spécifique aux populations francophones des maritimes, qui se situent dans une réalité totalement différente des populations francophones hors des maritimes comme le Québec. En effet, des avènements nationalistes ne se sont pas manifestés comme au Québec au sein des populations francophones des provinces maritimes (Arsenault. B. 2004). L’utilisation de théories nationalistes, comme le fait de nombreuses études sur le vote au niveau provincial au Québec, serait difficilement impliquée dans une étude de comportements électoraux comme celle-ci. Malgré cela, des études comme celles sur les bases théoriques du vote ethnolinguistique (ou ethnique) et des bases sur l’effet des cultures sur le vote et les attitudes de gens face à des enjeux pourraient être déployées de manière stratégique afin de former un cadre théorique fort pour une question qui n’en dispose pas vraiment (Wolfinger, 1965). À part la recherche limitée de Finn (1973), qui propose un vote ethnique, mais, ne propose pas, comme l’expliquent Arsenault et Ouellette (2024), de données concrètes sur la chose, la réalité fédérale est peu discutée. Malgré cela, la littérature disponible au niveau provincial est quand même importante. Des œuvres comme celle de Thorburn (1961), établis une vue d’ensemble provinciale des politiques et du vote linguistique au Nouveau-Brunswick. Thorburn (1961) conclut qu’au provincial, les populations francophones vont voter en bloc, et ce, pour le parti Libéral. Cette conclusion est supportée par les recherches d’Arsenault et Ouellette (2024), la recherche la plus récente sur le sujet au provincial. L’étude détermina des conclusions similaires de celle de Thorburn, concluant que les populations anglophones et francophones votent de manière différente et que les francophones supportent majoritairement le parti Libéral. Entre Thorburn (1961) et Arsenault et Ouellette (2024), d’autres études furent entamées, notamment celle de Cross et Stewart (2002). Cette étude venait contredire les conclusions de Thorburn (1961) et Finn (1973). L’étude de Cross et Stewart (2002), affirme qu’il y aurait un « brokerage », un désir des grands partis à se faire élire, qui ferait en sorte que ces partis proposeraient des initiatives appuyant les deux communautés ethniques. Le désir d’être élu agirait comme un contrepoids au vote ethnique. De plus, Cross et Stewart proposent que l’élection de Richard Hatfield en 1982 annonce la fin du vote ethnique au Nouveau-Brunswick. La fin de la recherche en 1999 limite son apport, car elle ne comptabilise pas les élections depuis. Il est alors possible que la recherche de Cross et Stewart aient trouvé une tendance qui semblait s’aligner avec un bris dans le vote en bloc. Les conclusions de Cross et Stewart (2002) sembleraient représenter la réalité du temps. Mais, comme nous l’avons vu, les conclusions des œuvres plus récentes comme celle d’Arsenault et Ouellette (2024) disent le contraire. Cela étant dit, des œuvres sur les tendances de votes au niveau fédéral pourraient nous donner une meilleure aperçue des conclusions proposées dans la littérature canadienne. L’œuvre de Johnston, The Canadian Party System, publiée en 2017, est une œuvre incontournable en politique électorale canadienne. Johnston affirme dans son livre qu’il y a de nombreuses tendances observables au vote canadien, notamment celle du vote religieux. Johnston explique qu’historiquement, les catholiques votent majoritairement pour le Parti Libéral. La population acadienne, une population francophone, majoritairement catholique, est une de ces populations. La conclusion qu’historiquement les catholiques votent majoritairement pour les Libéraux est appuyée par d’autres œuvres, comme celle de Anderson et Stephenson (2011). Anderson et Stephenson expliquent que, comme le mentionne Johnston quelques années plus tard, le vote catholique Libéral persiste à travers les décennies et que son avènement n’est pas un phénomène récent. Cette revue littéraire fut complété avec l'aide de Google Scholar et Zotero, Nous avons utilisée Google scholar afin de trouver des articles pertinents à notre recherche.Nous avons utilisé Google Scholar pour son accesibilitée et sa facilité de navigation et d'interaction entre la machine et l'humain De son coté, Zotero fut utilisé afin d'organisre nos sources. Nous avons organisé nos sources en deux niveux, provinciales et féférale, créant deux sous sections dans notre bibliothèque Zotero. Nousa avos choisi Zotero car le logiciel est gratuit et est facile a comprendre et utiliser.
+
+# Collecte de données
+
+Les données électorales furent obtenues par l’entremise de la Bibliothèque du Parlement, qui garde sur son site web les résultats de chaque élection canadienne. Nous avons obtenus nos données de recensements par l'entremise de Statistique Canada, plus précisement du census de population. Idéalement, nous aurions procédé à un *web scrapping* des pages nécéssaires, mais des bloqeurs sont possiblement installées sur le site du census, ce qui fit en sorte qu'il était plus facile de le faire à la main. Ces deux bases de données utilisées sont accessible de manière gratuite et est disponible au grand publique. Notre choix encourage donc la reproductibilité de notre recherche.Nous avons mis nos données récoltées dans un document excel comprenant l'année et le pourcentage de vote de chaque parti ainsi que le pourcentage de francophones durant l'élection donné.
+
+# Analyse et visualisation des données
+
+A l'aide de l'outil R, nous avons réussis a visualiser nos données afin de faire des régressions nous permettant d'analyser les relations entre notre variable francophone et notre variable électorale. Le code suivant nous apermis de faire une analyse de nos données. Voici le code utilisée:
+
+install.packages("readxl") install.packages("ggplot2") library(readxl) library(ggplot2) install.packages("dplyr") library(dplyr) install.packages("broom") library(broom) GARPH \<- read_excel("C:/Users/nicho/OneDrive/Documents/Test.xlsx")
+
+ggplot(GARPH, aes(x = Percent_French, y = Vote_Percentage, color = Party)) + geom_point() +\
+geom_smooth(method = "lm", se = FALSE) +\
+labs(title = "Nuage de points avec régression linéaire par parti", x = "Pourcentage de Francophones", y = "Pourcentage de Vote") + theme_minimal() + scale_color_manual(values = c("Lib" = "red", "Con" = "blue", "NPD" = "Orange"))
+
+title = "Nuage de points avec régression linéaire par parti" x = "Pourcentage de votes reçus" y = "Pourcentage de Français"
+
+correlation \<- cor(GARPH$Percent_French, GARPH$Vote_Percentage) print(paste("Correlation:", correlation))
+
+# Fit the linear model
+
+model \<- lm(Vote_Percentage \~ Percent_French + Party, data = GARPH)
+
+# Display the model summary
+
+summary(model)
+
+correlation_by_party \<- GARPH %\>% group_by(Party) %\>% summarise(correlation = cor(Percent_French, Vote_Percentage))
+
+# Print the results
+
+print(correlation_by_party)
+
+![Example Plot](%22C:/Users/nicho/OneDrive/Desktop/Memoire/Graphique%202021.png%22)
+
+Nous avons décider d'utiliser R pour de nombreuses raisons. D'un point de vue éthique, R est un logiciel libre et open-source, ce qui signifie qu'il est accessible gratuitement à tous. De plus, l'écosystème R encourage la transparence scientifique car les scripts et les analyses peuvent êtres reproduits et vérifiés par d'autres chercheurs. De plus, l'integration de *packages* de visualisation tels que ggplot, ggplot2, clessnverse etc.. font en sorte que nos données peuvent ètres démontrées de manière engageante et claire. en grso, sa flexibilitégraphique aisi que sont accessibilité générale nous à poussé à utiliser R.
+:::
